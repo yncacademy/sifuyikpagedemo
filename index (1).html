@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNC Academy | Sifu Yik Chan</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1A3C2E',
+                            gold: '#C9A84C',
+                            white: '#FFFFFF',
+                            light: '#F8F9FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for specific element tweaks not covered by utility classes */
+        html {
+            scroll-padding-top: 5rem; /* Offsets anchor links for sticky header */
+        }
+        
+        .css-book-shadow {
+            box-shadow: 
+                inset 4px 0 10px rgba(0, 0, 0, 0.1),
+                inset -1px 0 2px rgba(255, 255, 255, 0.3),
+                10px 10px 20px rgba(26, 60, 46, 0.15),
+                -1px 0 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .css-book-spine {
+            background: linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 10%, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0.2) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-green antialiased bg-brand-white selection:bg-brand-gold selection:text-brand-green">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full bg-brand-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-serif font-bold text-2xl tracking-tight text-brand-green flex items-center gap-2 group">
+                        <span class="w-8 h-8 bg-brand-gold text-brand-white rounded-lg flex items-center justify-center text-lg shadow-sm group-hover:scale-105 transition-transform duration-300">Y</span>
+                        <span>YNC Academy</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#story" class="text-sm font-medium text-brand-green/80 hover:text-brand-gold transition-colors duration-300">My Story</a>
+                    <a href="#pillars" class="text-sm font-medium text-brand-green/80 hover:text-brand-gold transition-colors duration-300">Core Pillars</a>
+                    <a href="#impact" class="text-sm font-medium text-brand-green/80 hover:text-brand-gold transition-colors duration-300">Impact</a>
+                    <a href="#resource" class="text-sm font-medium text-brand-green/80 hover:text-brand-gold transition-colors duration-300">Free Guide</a>
+                    <a href="https://yncas.com" target="_blank" class="bg-brand-green text-brand-gold text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-brand-green/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Join Camp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-green overflow-hidden">
+        <!-- Subtle Background Pattern/Glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-gold/10 via-brand-green to-brand-green"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center text-center lg:text-left z-10">
+            <div class="lg:w-2/3 xl:w-3/5">
+                <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-gold leading-[1.1] mb-6">
+                    Design Your Destiny. Achieve True Financial Freedom.
+                </h1>
+                <p class="mt-4 text-lg md:text-xl xl:text-2xl text-brand-white/90 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10">
+                    I am Sifu Yik Chan. I guide you out of the rat race and into a life of spiritual purpose, abundance, and automated passive income.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://yncas.com" target="_blank" class="inline-flex justify-center items-center px-8 py-4 text-base md:text-lg font-bold rounded-full text-brand-green bg-brand-gold hover:bg-brand-white hover:scale-105 hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all duration-300">
+                        Start Your Awakening Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / My Story Section -->
+    <section id="story" class="py-24 bg-brand-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image Side -->
+                <div class="w-full lg:w-1/2 relative">
+                    <!-- Decorative element behind image -->
+                    <div class="absolute -inset-4 bg-brand-light rounded-3xl transform rotate-3"></div>
+                    <div class="absolute -inset-4 border-2 border-brand-gold/30 rounded-3xl transform -rotate-2"></div>
+                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sifu Yik Chan - Mentor" class="relative rounded-2xl shadow-xl w-full h-[500px] object-cover object-top">
+                </div>
+                
+                <!-- Content Side -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-green mb-8">
+                        My Mission is Your Freedom.
+                    </h2>
+                    <div class="space-y-6 text-lg text-brand-green/80 leading-relaxed font-light">
+                        <p class="font-medium text-brand-green text-xl border-l-4 border-brand-gold pl-6">
+                            I'm Yik Chan, founder of YNC Academy, and my life's mission is to uplift one million people to achieve true abundance and well-being.
+                        </p>
+                        <p>
+                            By digging deep into spiritual study and mastering the rules of business, I built a fully automated passive income system that transformed my life.
+                        </p>
+                        <p>
+                            Now, I am here to help you break free from working out of fear, so you can build real wealth and uncover your ultimate purpose.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Stand For (Pillars) -->
+    <section id="pillars" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-green mb-4">The Core Pillars of YNC Academy</h2>
+                <p class="text-brand-green/70 text-lg">The foundational principles that turn passive information into lifelong wisdom, wealth, and spiritual power.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                <!-- Card 1 -->
+                <div class="bg-brand-green rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
+                    <h3 class="font-serif text-2xl lg:text-3xl font-bold text-brand-gold mb-6 group-hover:text-brand-white transition-colors duration-300">Create, Don't Compete</h3>
+                    <ul class="space-y-4 text-brand-white/90 font-light text-lg">
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Focus on generating true value for the universe instead of operating out of selfishness.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Always aim to create win-win-win situations for yourself, your team, and humanity.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-green rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
+                    <h3 class="font-serif text-2xl lg:text-3xl font-bold text-brand-gold mb-6 group-hover:text-brand-white transition-colors duration-300">Take 100% Responsibility</h3>
+                    <ul class="space-y-4 text-brand-white/90 font-light text-lg">
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Shift from a complaining victim mindset to becoming the active creator of your own reality.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Recognize that every obstacle is actually a mentor designed to help you grow.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-green rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
+                    <h3 class="font-serif text-2xl lg:text-3xl font-bold text-brand-gold mb-6 group-hover:text-brand-white transition-colors duration-300">Commit to Daily Advancement</h3>
+                    <ul class="space-y-4 text-brand-white/90 font-light text-lg">
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Dedicate yourself to learning and improving your physical, mental, emotional, and spiritual health every single day.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Transform basic information into lifelong wisdom through consistent practice and sharing.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-green rounded-3xl p-8 lg:p-10 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
+                    <h3 class="font-serif text-2xl lg:text-3xl font-bold text-brand-gold mb-6 group-hover:text-brand-white transition-colors duration-300">Wealth Follows Purpose</h3>
+                    <ul class="space-y-4 text-brand-white/90 font-light text-lg">
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Stop trading your time in the rat race and learn to build automated passive income assets.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span>Understand that money is simply a byproduct of discovering your passion and helping others solve problems.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="impact" class="bg-brand-gold py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-2xl lg:text-4xl font-bold text-brand-green">Our Global Impact</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x border-brand-green/20">
+                <div class="flex flex-col border-r border-brand-green/20 md:border-transparent md:border-r-brand-green/20 last:border-0 p-4">
+                    <span class="font-serif text-4xl lg:text-6xl font-bold text-brand-green mb-2">1M+</span>
+                    <span class="font-sans text-sm lg:text-base uppercase tracking-widest font-semibold text-brand-green/80">People to Uplift</span>
+                </div>
+                
+                <div class="flex flex-col border-brand-green/20 md:border-r-brand-green/20 p-4">
+                    <span class="font-serif text-4xl lg:text-6xl font-bold text-brand-green mb-2">68+</span>
+                    <span class="font-sans text-sm lg:text-base uppercase tracking-widest font-semibold text-brand-green/80">Live Trainings</span>
+                </div>
+                
+                <div class="flex flex-col border-r border-brand-green/20 md:border-transparent md:border-r-brand-green/20 p-4">
+                    <span class="font-serif text-4xl lg:text-6xl font-bold text-brand-green mb-2">2</span>
+                    <span class="font-sans text-sm lg:text-base uppercase tracking-widest font-semibold text-brand-green/80">Shopify 100K Awards</span>
+                </div>
+                
+                <div class="flex flex-col p-4">
+                    <span class="font-serif text-4xl lg:text-6xl font-bold text-brand-green mb-2">$1K+</span>
+                    <span class="font-sans text-sm lg:text-base uppercase tracking-widest font-semibold text-brand-green/80">Daily Student Revenue</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Resource / Lead Magnet Section -->
+    <section id="resource" class="py-24 bg-brand-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="bg-brand-light rounded-[3rem] overflow-hidden shadow-sm border border-brand-green/5">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <!-- Visual Mockup Side -->
+                    <div class="w-full lg:w-5/12 bg-brand-green p-12 flex items-center justify-center relative overflow-hidden">
+                        <!-- BG elements -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-white rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
+                        
+                        <!-- Pure CSS Book Mockup -->
+                        <div class="relative z-10 w-48 h-64 lg:w-56 lg:h-72 bg-brand-white rounded-r-lg rounded-l-sm css-book-shadow transform perspective-1000 rotate-y-[-15deg] rotate-x-[5deg] hover:rotate-y-0 hover:scale-105 transition-all duration-500 flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="absolute left-0 top-0 bottom-0 w-4 css-book-spine"></div>
+                            
+                            <div class="ml-2 relative z-20">
+                                <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">YNC Academy</span>
+                                <h3 class="font-serif text-2xl lg:text-3xl font-bold text-brand-green mt-2 leading-tight">Guide to Meditation</h3>
+                                <p class="text-xs text-brand-green/60 mt-2 font-medium">Diaphragmatic Breathing & Awakening</p>
+                            </div>
+                            
+                            <div class="ml-2 relative z-20">
+                                <p class="text-xs font-bold text-brand-green border-t border-brand-green/20 pt-2">By Sifu Yik Chan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Side -->
+                    <div class="w-full lg:w-7/12 p-10 md:p-16 flex flex-col justify-center">
+                        <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-4">Free Resource</span>
+                        <h2 class="font-serif text-3xl md:text-5xl font-bold text-brand-green mb-6">Awaken Your Inner Power Today</h2>
+                        <p class="text-lg text-brand-green/70 mb-8 leading-relaxed font-light max-w-xl">
+                            Download my free <strong>Diaphragmatic Breathing eBook</strong> and <strong>Guide to Meditation</strong>. Learn how to instantly connect with your higher self, find peace, and align your mindset for true wealth.
+                        </p>
+                        
+                        <form class="space-y-4 max-w-md" onsubmit="event.preventDefault(); alert('In a live environment, this would link to your email marketing provider!');">
+                            <div>
+                                <input type="email" placeholder="Enter your best email address" required class="w-full px-6 py-4 bg-brand-white border border-brand-green/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all">
+                            </div>
+                            <button type="submit" class="w-full bg-brand-gold text-brand-green font-bold text-lg px-8 py-4 rounded-xl hover:bg-brand-green hover:text-brand-gold shadow-lg hover:shadow-xl transition-all duration-300">
+                                Send Me The Free Guides
+                            </button>
+                            <p class="text-xs text-brand-green/50 text-center mt-3">We respect your privacy. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="join" class="bg-brand-green py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjAxLCAxNjgsIDc2LCAwLjE1KSIvPjwvc3ZnPg==')] opacity-50"></div>
+        <div class="relative max-w-4xl mx-auto px-6 text-center z-10">
+            <h2 class="font-serif text-4xl md:text-6xl font-bold text-brand-gold mb-6">
+                Take Back Your Remote Control
+            </h2>
+            <p class="text-xl md:text-2xl text-brand-white/90 font-light mb-12 leading-relaxed">
+                You are the designer of your life, and the universe is ready to give you exactly what you ask for. Are you ready to take the first step?
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://yncas.com" target="_blank" class="inline-flex justify-center items-center px-10 py-5 text-lg font-bold rounded-full text-brand-green bg-brand-gold hover:bg-brand-white hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(201,168,76,0.3)] transition-all duration-300">
+                    Join the Wealth Training Camp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#11291f] py-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-serif font-bold text-xl text-brand-gold flex items-center gap-2">
+                <span class="w-6 h-6 bg-brand-gold text-brand-green rounded flex items-center justify-center text-xs">Y</span>
+                YNC Academy
+            </div>
+            <p class="text-sm text-brand-white/50 font-light">
+                &copy; 2026 YNC Academy. All rights reserved. 
+            </p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-brand-white/50 hover:text-brand-gold transition-colors text-sm">Privacy Policy</a>
+                <a href="#" class="text-brand-white/50 hover:text-brand-gold transition-colors text-sm">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
