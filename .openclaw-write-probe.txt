@@ -1,1 +1,0 @@
-openclaw write capability probe — safe to delete
